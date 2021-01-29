@@ -1,12 +1,18 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo list</title>
-    <link rel="stylesheet" href="./styles/index.css" />
-    <link rel="stylesheet" href="./styles/font-awesome.min.css" />
-    <link rel="stylesheet" href="fonts/fontawesome-webfont.ttf" />
+    <!-- <link rel="stylesheet" href="./styles/index.css" /> -->
+    <link rel="stylesheet" href="(% static 'styles/index.css' %)" />
+    <!-- <link rel="stylesheet" href="./styles/checkbox.css"> -->
+    <!-- <link rel="stylesheet" href="{% static 'styles/checkbox.css' %}"> -->
+    <!-- <link rel="stylesheet" href="./styles/font-awesome.min.css" /> -->
+    <link rel="stylesheet" href="{% static 'styles/font-awesome.min.css' %}" />
+    <!-- <link rel="stylesheet" href="fonts/fontawesome-webfont.ttf" /> -->
+    <link rel="stylesheet" href="{% static 'fonts/fontawesome-webfont.ttf' %}" />
 </head>
 <body>
     <section>
