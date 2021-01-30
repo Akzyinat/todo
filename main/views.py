@@ -14,10 +14,10 @@ def third(request):
     return HttpResponse("This is page test 3")
 
 def added(request):
-    return HttpResponse("add.html")
+    return render(request, "add.html")
 
 def changed(request):
-    return HttpResponse("change.html")
+    return render(request, "change.html")
 
 def deleted(request):
-    return HttpResponse("delete.html")
+    return render(request, "delete.html")
