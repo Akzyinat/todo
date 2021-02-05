@@ -15,18 +15,18 @@
     <link rel="stylesheet" href="{% static 'fonts/fontawesome-webfont.ttf' %}" />
 </head>
 <body>
-    <!-- <h2>Это тестовая страница</h2>
-    {% for todo in todo_list %}
-        <h3>{{ todo.text }} - {{ todo.created_at }}</h3>
-    {% endfor %} -->
     <section>
         <div class="create_container">
-            <input 
-                class="create_input"
-                type="text"
-                placeholder="Напишите сюда новую задачу"
-            />
-            <button class="create_button">Добавить</button>
+            <form action="{% url 'add-todo' %}" method="POST">
+                {% csrf_token %}
+                <input 
+                    class="create_input"
+                    type="text"
+                    placeholder="Напишите сюда новую задачу"
+                    name="todo_text"
+                />
+                <button class="create_button">Добавить</button>
+            </form>
         </div> 
 
         <div class="todo_container">
