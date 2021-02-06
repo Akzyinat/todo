@@ -43,7 +43,7 @@
                     <p>{{ todo.created_at }}</p>
                     <div class="action_buttons"> 
                         <i class="fa fa-star-o" aria-hidden="true"></i> 
-                        <i class="fa fa-trash" aria-hidden="true"></i>
+                        <a href="{% url 'delete-todo' todo.id %}"><i class="fa fa-trash" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
